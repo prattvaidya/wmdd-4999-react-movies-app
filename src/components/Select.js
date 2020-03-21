@@ -43,20 +43,22 @@ const Select = ({ items, label, onChange: handleItemChange, selectedItem, setPag
 			<InputLabel ref={inputLabel} id="select-dd-label">
 				{label}
 			</InputLabel>
-			<MUISelect
-				labelId="select-dd-label"
-				id="select-dd"
-				className={classes.searchType}
-				value={selectedItem}
-				onChange={handleChange}
-				labelWidth={labelWidth}
-			>
-				{items.map(item => (
-					<MenuItem value={item} key={item}>
-						{item}
-					</MenuItem>
-				))}
-			</MUISelect>
+			{selectedItem && (
+				<MUISelect
+					labelId="select-dd-label"
+					id="select-dd"
+					className={classes.searchType}
+					value={selectedItem}
+					onChange={handleChange}
+					labelWidth={labelWidth}
+				>
+					{items.map(item => (
+						<MenuItem value={item} key={item}>
+							{item}
+						</MenuItem>
+					))}
+				</MUISelect>
+			)}
 		</FormControl>
 	)
 }

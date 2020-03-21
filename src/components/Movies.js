@@ -5,14 +5,14 @@ import React, { useEffect, useState } from 'react'
 import Grid from '@material-ui/core/Grid'
 
 // Components
-import Select from 'components/Select'
-import Cards from 'components/Cards'
+import Select from './Select'
+import Cards from './Cards'
 
 // Styles
-import 'styles/Movies.scss'
+import '../styles/Movies.scss'
 
 // Services
-import { get } from 'tmdb-api'
+import { get } from '../tmdb-api'
 
 const Movies = ({ page, setPage }) => {
 	// Init

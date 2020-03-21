@@ -8,10 +8,10 @@ import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 
 // Components
-import Movies from 'components/Movies'
-import SearchResults from 'components/SearchResults'
-import TabPanel from 'components/TabPanel'
-import TVShows from 'components/TVShows'
+import Movies from './Movies'
+import SearchResults from './SearchResults'
+import TabPanel from './TabPanel'
+import TVShows from './TVShows'
 
 // MUI styles
 const useStyles = makeStyles(theme => ({

@@ -5,7 +5,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 
 // Components
-import Cards from 'components/Cards'
+import Cards from './Cards'
 
 const SearchResults = ({ page, setPage, searchResults, searchMsg }) => {
 	return searchMsg.length === 0 ? (

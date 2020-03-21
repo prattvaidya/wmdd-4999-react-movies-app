@@ -2,12 +2,12 @@
 import React, { useState } from 'react'
 
 // Components
-import Header from 'components/Header'
-import SearchForm from 'components/SearchForm'
-import Content from 'components/Content'
+import Header from './components/Header'
+import SearchForm from './components/SearchForm'
+import Content from './components/Content'
 
 // Style imports
-import 'styles/App.scss'
+import './styles/App.scss'
 
 function App() {
 	// States (These states have to be here as the Search Results will be passed from SearchForm to the children on Content)

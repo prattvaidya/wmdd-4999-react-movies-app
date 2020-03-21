@@ -45,7 +45,7 @@ const Cards = ({ mediaList, page, setPage }) => {
 					<MUICard className={classes.container} key={index}>
 						<CardMedia
 							className={classes.media}
-							image={`${process.env.REACT_APP_TMDB_POSTER_BASE_URL}${media.poster_path}`}
+							image={`http://image.tmdb.org/t/p/w200/${media.poster_path}`}
 							title="Poster"
 						/>
 						<Grid container direction="column" justify="center" align="center">

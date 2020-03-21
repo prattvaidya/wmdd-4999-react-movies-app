@@ -8,13 +8,13 @@ import FormControl from '@material-ui/core/FormControl'
 import TextField from '@material-ui/core/TextField'
 
 // Components
-import Select from 'components/Select'
+import Select from './Select'
 
 // Services
-import { get } from 'tmdb-api.js'
+import { get } from '../tmdb-api.js'
 
 // Styles
-import 'styles/SearchForm.scss'
+import '../styles/SearchForm.scss'
 
 // MUI styles
 const useStyles = makeStyles(theme => ({
@@ -52,11 +52,11 @@ const SearchForm = ({ onSubmit: handleSubmit, onErr: handleErr, page, setCurrent
 			get(`search/${type}`, `&query=${encodeURI(searchKeyword)}&page=${page}`)
 				.then(res => {
 					handleSubmit(res)
-					if (res.length === 0) handleErr('Sorry, there were no results')
+					setCurrentTab(1)
+					if (res.results.length === 0) handleErr('Sorry, there were no results')
 					else {
 						handleErr('')
 						setPage(res.page)
-						setCurrentTab(1)
 					}
 				})
 				.catch(err => console.log(err))
